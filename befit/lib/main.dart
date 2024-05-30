@@ -1,8 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 
 void main() {
   runApp(MaterialApp(
@@ -10,8 +8,10 @@ void main() {
     theme: ThemeData(
       primarySwatch: Colors.green,
       textTheme: TextTheme(
-        headline1: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green),
-        headline2: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
+        headline1: TextStyle(
+            fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green),
+        headline2: TextStyle(
+            fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
         bodyText1: TextStyle(fontSize: 16, color: Colors.black87),
       ),
     ),
@@ -49,13 +49,12 @@ class BeFitRwandaHomePage extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(10),
-                    child: Image(
-                      image: AssetImage('assets/befit.jpg',
-                      
-                      ),
-                    )
-                  ),
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image(
+                        image: AssetImage(
+                          'assets/befit.jpg',
+                        ),
+                      )),
                   SizedBox(height: 20),
                   ElevatedButton.icon(
                     onPressed: () {},
@@ -101,10 +100,11 @@ class BeFitRwandaHomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.fitness_center), label: 'Workouts'),
-          BottomNavigationBarItem(icon: Icon(Icons.fastfood), label: 'Nutrition'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.fitness_center), label: 'Workouts'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.fastfood), label: 'Nutrition'),
         ],
-        
         unselectedItemColor: Colors.grey,
       ),
       floatingActionButton: FloatingActionButton(
