@@ -115,3 +115,70 @@ class BeFitRwandaHomePage extends StatelessWidget {
     );
   }
 }
+class FitnessTipsSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.green[50],
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.fitness_center, size: 40, color: Colors.green),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'Access workout routines tailored to different fitness levels and goals.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('View Workouts'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class NutritionAdviceSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.green[50],
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.fastfood, size: 40, color: Colors.green),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'Get personalized meal plans and healthy recipes.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('View Nutrition Tips'),
+          ),
+        ],
+      ),
+    );
+  }
+}
