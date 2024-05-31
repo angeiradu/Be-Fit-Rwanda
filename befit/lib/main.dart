@@ -115,6 +115,7 @@ class BeFitRwandaHomePage extends StatelessWidget {
     );
   }
 }
+
 class FitnessTipsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -176,6 +177,108 @@ class NutritionAdviceSection extends StatelessWidget {
           ElevatedButton(
             onPressed: () {},
             child: Text('View Nutrition Tips'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class CommunitySupportSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.green[50],
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.group, size: 40, color: Colors.green),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'Join our community and share your fitness journey.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Join Community'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ProgressTrackingSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.green[50],
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.show_chart, size: 40, color: Colors.green),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'Track your fitness progress over time.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Track Progress'),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DynamicRemindersSection extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.green[50],
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Icon(Icons.notifications_active, size: 40, color: Colors.green),
+              SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'Get reminders to stay on track with your goals.',
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Set Reminders'),
           ),
         ],
       ),
