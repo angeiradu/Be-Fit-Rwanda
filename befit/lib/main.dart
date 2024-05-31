@@ -1,42 +1,42 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MaterialApp(
     title: 'Be-Fit Rwanda',
     theme: ThemeData(
       primarySwatch: Colors.green,
-      textTheme: TextTheme(
-        headline1: TextStyle(
+      textTheme: const TextTheme(
+        displayLarge: TextStyle(
             fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green),
-        headline2: TextStyle(
+        displayMedium: TextStyle(
             fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
-        bodyText1: TextStyle(fontSize: 16, color: Colors.black87),
+        bodyLarge: TextStyle(fontSize: 16, color: Colors.black87),
       ),
     ),
-    home: BeFitRwandaHomePage(),
+    home: const BeFitRwandaHomePage(),
   ));
 }
 
 class BeFitRwandaHomePage extends StatelessWidget {
+  const BeFitRwandaHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Be-Fit Rwanda'),
-        titleTextStyle: TextStyle(
+        title: const Text('Be-Fit Rwanda'),
+        titleTextStyle: const TextStyle(
           fontSize: 25.0,
           color: Colors.black,
           fontWeight: FontWeight.bold,
         ),
         actions: [
-          IconButton(icon: Icon(Icons.search), onPressed: () {}),
-          IconButton(icon: Icon(Icons.more_vert), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+          IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -45,60 +45,60 @@ class BeFitRwandaHomePage extends StatelessWidget {
                 children: [
                   Text(
                     'Welcome to Be-Fit Rwanda!',
-                    style: Theme.of(context).textTheme.headline1,
+                    style: Theme.of(context).textTheme.displayLarge,
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image(
+                      child: const Image(
                         image: AssetImage(
                           'assets/befit.jpg',
                         ),
                       )),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ElevatedButton.icon(
                     onPressed: () {},
-                    icon: Icon(Icons.fitness_center),
-                    label: Text('Get Started'),
+                    icon: const Icon(Icons.fitness_center),
+                    label: const Text('Get Started'),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
             Text(
               'Fitness Tips and Workout Routines',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
-            FitnessTipsSection(),
-            SizedBox(height: 20),
+            const FitnessTipsSection(),
+            const SizedBox(height: 20),
             Text(
               'Nutrition Advice',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
-            NutritionAdviceSection(),
-            SizedBox(height: 20),
+            const NutritionAdviceSection(),
+            const SizedBox(height: 20),
             Text(
               'Community Support',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
-            CommunitySupportSection(),
-            SizedBox(height: 20),
+            const CommunitySupportSection(),
+            const SizedBox(height: 20),
             Text(
               'Progress Tracking',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
-            ProgressTrackingSection(),
-            SizedBox(height: 20),
+            const ProgressTrackingSection(),
+            const SizedBox(height: 20),
             Text(
               'Dynamic Reminders',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
-            DynamicRemindersSection(),
+            const DynamicRemindersSection(),
           ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.fitness_center), label: 'Workouts'),
@@ -109,18 +109,20 @@ class BeFitRwandaHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.add),
         backgroundColor: Theme.of(context).primaryColor,
+        child: const Icon(Icons.add),
       ),
     );
   }
 }
 
 class FitnessTipsSection extends StatelessWidget {
+  const FitnessTipsSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.green[50],
         borderRadius: BorderRadius.circular(10),
@@ -129,20 +131,20 @@ class FitnessTipsSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.fitness_center, size: 40, color: Colors.green),
-              SizedBox(width: 10),
+              const Icon(Icons.fitness_center, size: 40, color: Colors.green),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Access workout routines tailored to different fitness levels and goals.',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {},
-            child: Text('View Workouts'),
+            child: const Text('View Workouts'),
           ),
         ],
       ),
@@ -151,10 +153,12 @@ class FitnessTipsSection extends StatelessWidget {
 }
 
 class NutritionAdviceSection extends StatelessWidget {
+  const NutritionAdviceSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.green[50],
         borderRadius: BorderRadius.circular(10),
@@ -163,20 +167,20 @@ class NutritionAdviceSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.fastfood, size: 40, color: Colors.green),
-              SizedBox(width: 10),
+              const Icon(Icons.fastfood, size: 40, color: Colors.green),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Get personalized meal plans and healthy recipes.',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {},
-            child: Text('View Nutrition Tips'),
+            child: const Text('View Nutrition Tips'),
           ),
         ],
       ),
@@ -185,10 +189,12 @@ class NutritionAdviceSection extends StatelessWidget {
 }
 
 class CommunitySupportSection extends StatelessWidget {
+  const CommunitySupportSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.green[50],
         borderRadius: BorderRadius.circular(10),
@@ -197,20 +203,20 @@ class CommunitySupportSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.group, size: 40, color: Colors.green),
-              SizedBox(width: 10),
+              const Icon(Icons.group, size: 40, color: Colors.green),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Join our community and share your fitness journey.',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Join Community'),
+            child: const Text('Join Community'),
           ),
         ],
       ),
@@ -219,10 +225,12 @@ class CommunitySupportSection extends StatelessWidget {
 }
 
 class ProgressTrackingSection extends StatelessWidget {
+  const ProgressTrackingSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.green[50],
         borderRadius: BorderRadius.circular(10),
@@ -231,20 +239,20 @@ class ProgressTrackingSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.show_chart, size: 40, color: Colors.green),
-              SizedBox(width: 10),
+              const Icon(Icons.show_chart, size: 40, color: Colors.green),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Track your fitness progress over time.',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Track Progress'),
+            child: const Text('Track Progress'),
           ),
         ],
       ),
@@ -253,10 +261,12 @@ class ProgressTrackingSection extends StatelessWidget {
 }
 
 class DynamicRemindersSection extends StatelessWidget {
+  const DynamicRemindersSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.green[50],
         borderRadius: BorderRadius.circular(10),
@@ -265,20 +275,20 @@ class DynamicRemindersSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Icon(Icons.notifications_active, size: 40, color: Colors.green),
-              SizedBox(width: 10),
+              const Icon(Icons.notifications_active, size: 40, color: Colors.green),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   'Get reminders to stay on track with your goals.',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           ElevatedButton(
             onPressed: () {},
-            child: Text('Set Reminders'),
+            child: const Text('Set Reminders'),
           ),
         ],
       ),
