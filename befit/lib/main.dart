@@ -275,7 +275,8 @@ class DynamicRemindersSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              const Icon(Icons.notifications_active, size: 40, color: Colors.green),
+              const Icon(Icons.notifications_active,
+                  size: 40, color: Colors.green),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
